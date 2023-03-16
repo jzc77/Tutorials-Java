@@ -6,7 +6,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 import com.google.gson.Gson;
-// https://youtu.be/9oq7Y8n1t00?t=883
+// https://youtu.be/9oq7Y8n1t00?t=1289
 
 public class RestAPIWithJohn {
     public static void main(String[] args) throws Exception {
@@ -26,6 +26,11 @@ public class RestAPIWithJohn {
         // SN: How to receive all the information we requested as a POST request
         HttpClient httpClient = HttpClient.newHttpClient();
         HttpResponse<String> postResponse = httpClient.send(postRequest, HttpResponse.BodyHandlers.ofString());  // Second argument means that we expect it to send back a string in response
-        System.out.println(postResponse.body());
+        System.out.println(postResponse.body());  // json object
+
+        // 1st parameter = JSON string that you want to convert into an object
+        // 2nd parameter = the class you want to convert JSON into
+        transcript = gson.fromJson(postResponse.body(), Transcript.class);
+        System.out.println(transcript.getId());  // id of the json object
     }
 }
