@@ -6,7 +6,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 import com.google.gson.Gson;
-// https://youtu.be/9oq7Y8n1t00?t=1289
 
 public class RestAPIWithJohn {
     public static void main(String[] args) throws Exception {
@@ -32,5 +31,17 @@ public class RestAPIWithJohn {
         // 2nd parameter = the class you want to convert JSON into
         transcript = gson.fromJson(postResponse.body(), Transcript.class);
         System.out.println(transcript.getId());  // id of the json object
+
+        // SN: How to get all the information as a GET request from the specified URL with specific id
+        HttpRequest getRequest = HttpRequest.newBuilder()
+                .uri(new URI("https://api.assemblyai.com/v2/transcript" + transcript.getId()))
+                .header("Authorization", System.getenv("API_KEY"))
+                .GET()  // No request body needed inside; GET() is default, so don't even need to include here
+                .build();
+
+        HttpResponse<String> getResponse = httpClient.send(getRequest, HttpResponse.BodyHandlers.ofString());  // Second argument means that we expect it to send back a string in our call
+        transcript = gson.fromJson(getResponse.body(), Transcript.class);
+        System.out.println(getResponse);
+
     }
 }
