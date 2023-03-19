@@ -1,4 +1,4 @@
-package GenericsWithJohn.GeneralGenerics;
+package GenericsWithJohn.GeneralGenericsClass;
 
 public class IntegerPrinter {
     Integer thingToPrint;

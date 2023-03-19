@@ -1,4 +1,4 @@
-package GenericsWithJohn.BoundedGenerics;
+package GenericsWithJohn.BoundedGenericClass;
 
 public class GenericsWithJohn {
     public static void main(String[] args) {

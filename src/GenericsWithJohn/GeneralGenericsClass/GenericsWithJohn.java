@@ -1,4 +1,4 @@
-package GenericsWithJohn.GeneralGenerics;
+package GenericsWithJohn.GeneralGenericsClass;
 // https://www.youtube.com/watch?v=K1iu1kXkVoA (Generics In Java - Full Simple Tutorial)
 
 public class GenericsWithJohn {

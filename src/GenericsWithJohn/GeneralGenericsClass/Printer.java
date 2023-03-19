@@ -1,4 +1,4 @@
-package GenericsWithJohn.GeneralGenerics;
+package GenericsWithJohn.GeneralGenericsClass;
 
 public class Printer<T> {  // T can stand for Type, but it can be whatever you want
     T thingToPrint;

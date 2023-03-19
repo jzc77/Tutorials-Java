@@ -1,4 +1,4 @@
-package GenericsWithJohn.BoundedGenerics;
+package GenericsWithJohn.BoundedGenericClass;
 
 public class Printer<T extends Animal> {  // This is called a bounded generic. "T" is now some type of Animal.
     T thingToPrint;
