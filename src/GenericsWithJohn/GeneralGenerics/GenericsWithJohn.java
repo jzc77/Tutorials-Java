@@ -1,7 +1,5 @@
-package GenericsWithJohn;
+package GenericsWithJohn.GeneralGenerics;
 // https://www.youtube.com/watch?v=K1iu1kXkVoA (Generics In Java - Full Simple Tutorial)
-
-import java.util.Arrays;
 
 public class GenericsWithJohn {
 
@@ -25,6 +23,8 @@ public class GenericsWithJohn {
 
         Printer<String> stringPrinter = new Printer<>("2323 string");  // "String" type will be passed into "T" in Printer.java
         stringPrinter.print();
+
+
     }
 
 }

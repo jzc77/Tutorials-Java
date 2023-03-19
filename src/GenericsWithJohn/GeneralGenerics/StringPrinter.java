@@ -1,4 +1,4 @@
-package GenericsWithJohn;
+package GenericsWithJohn.GeneralGenerics;
 
 public class StringPrinter {
     String thingToPrint;

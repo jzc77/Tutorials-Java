@@ -1,4 +1,4 @@
-package GenericsWithJohn;
+package GenericsWithJohn.GeneralGenerics;
 
 public class Printer<T> {  // T can stand for Type, but it can be whatever you want
     T thingToPrint;
@@ -11,3 +11,4 @@ public class Printer<T> {  // T can stand for Type, but it can be whatever you w
         System.out.println(thingToPrint);
     }
 }
+
